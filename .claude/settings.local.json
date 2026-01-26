@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(claude mcp add:*)"
+      "Bash(claude mcp add:*)",
+      "mcp__context7__resolve-library-id"
     ]
   }
 }
