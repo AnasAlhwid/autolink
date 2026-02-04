@@ -13,7 +13,7 @@ import {
 import { WorkflowNode } from "@/components/workflow-node";
 
 interface BaseTriggerNodeProps extends NodeProps {
-  icon: LucideIcon;
+  icon: string | LucideIcon;
   name: string;
   description?: string;
   children?: ReactNode;
