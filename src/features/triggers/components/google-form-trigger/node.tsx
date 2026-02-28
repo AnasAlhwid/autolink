@@ -34,4 +34,4 @@ export const GoogleFormTrigger = memo((props: NodeProps) => {
   );
 });
 
-GoogleFormTrigger.displayName = "GoogleFormTriggerNode";
+// GoogleFormTrigger.displayName = "GoogleFormTriggerNode";
