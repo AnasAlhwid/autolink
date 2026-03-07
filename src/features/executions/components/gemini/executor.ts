@@ -4,6 +4,7 @@ import Handlebars from "handlebars";
 import { NonRetriableError } from "inngest";
 import type { NodeExecutor } from "@/features/executions/types";
 import { geminiChannel } from "@/inngest/channels/gemini";
+import { decrypt } from "@/lib/encryption";
 import prisma from "@/lib/prisma";
 
 Handlebars.registerHelper("json", (context) => {
@@ -91,7 +92,7 @@ export const geminiExecutor: NodeExecutor<GeminiData> = async ({
   }
 
   const google = createGoogleGenerativeAI({
-    apiKey: credential.value,
+    apiKey: decrypt(credential.value),
   });
 
   try {
