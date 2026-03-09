@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -24,7 +25,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
-import Image from "next/image";
 
 const registerSchema = z
   .object({
@@ -51,6 +51,38 @@ export function RegisterForm() {
     },
   });
 
+  const signInGithub = async () => {
+    await authClient.signIn.social(
+      {
+        provider: "github",
+      },
+      {
+        onSuccess: () => {
+          router.push("/");
+        },
+        onError: () => {
+          toast.error("Error login using Github");
+        },
+      },
+    );
+  };
+
+  const signInGoogle = async () => {
+    await authClient.signIn.social(
+      {
+        provider: "google",
+      },
+      {
+        onSuccess: () => {
+          router.push("/");
+        },
+        onError: () => {
+          toast.error("Error login using Google");
+        },
+      },
+    );
+  };
+
   const onSubmit = async (values: RegisterFormValues) => {
     await authClient.signUp.email(
       {
@@ -66,7 +98,7 @@ export function RegisterForm() {
         onError: (ctx) => {
           toast.error(ctx.error.message);
         },
-      }
+      },
     );
   };
 
@@ -85,6 +117,7 @@ export function RegisterForm() {
               <div className="grid gap-6">
                 <div className="flex flex-col gap-4">
                   <Button
+                    onClick={signInGithub}
                     variant="outline"
                     className="w-full"
                     type="button"
@@ -99,6 +132,7 @@ export function RegisterForm() {
                     Continue with GitHub
                   </Button>
                   <Button
+                    onClick={signInGoogle}
                     variant="outline"
                     className="w-full"
                     type="button"
