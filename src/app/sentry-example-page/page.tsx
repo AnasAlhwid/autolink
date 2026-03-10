@@ -53,7 +53,7 @@ export default function Page() {
           <a
             target="_blank"
             rel="noopener"
-            href="https://project-a-q3.sentry.io/issues/?project=4510684830564353"
+            href="https://autolink-65.sentry.io/issues/?project=4511015937048656"
           >
             Issues Page
           </a>

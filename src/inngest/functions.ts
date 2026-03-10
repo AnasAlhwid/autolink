@@ -1,4 +1,4 @@
-import { NonRetriableError, step } from "inngest";
+import { NonRetriableError } from "inngest";
 import { getExecutor } from "@/features/executions/lib/executor-registry";
 import { ExecutionStatus, type NodeType } from "@/generated/prisma/enums";
 import prisma from "@/lib/prisma";
@@ -17,8 +17,8 @@ import { topologicalSort } from "./utils";
 export const executeWorkflow = inngest.createFunction(
   {
     id: "execute-workflow",
-    retries: 0, // TODO: Remove in Production
-    onFailure: async ({ event, step }) => {
+    retries: process.env.NODE_ENV === "production" ? 3 : 0,
+    onFailure: async ({ event }) => {
       return prisma.execution.update({
         where: { inngestEventId: event.data.event.id },
         data: {
