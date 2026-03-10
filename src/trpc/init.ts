@@ -1,9 +1,9 @@
-import { auth } from "@/lib/auth";
-import { polarClient } from "@/lib/polar";
 import { initTRPC, TRPCError } from "@trpc/server";
 import { headers } from "next/headers";
 import { cache } from "react";
 import superjson from "superjson";
+import { auth } from "@/lib/auth";
+import { polarClient } from "@/lib/polar";
 
 export const createTRPCContext = cache(async () => {
   /**
@@ -55,5 +55,5 @@ export const premiumProcedure = protectedProcedure.use(
     }
 
     return next({ ctx: { ...ctx, customer } });
-  }
+  },
 );

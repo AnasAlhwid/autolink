@@ -8,6 +8,11 @@ import {
   LogOutIcon,
   StarIcon,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useHasActiveSubscription } from "@/features/subscriptions/hooks/use-subscription";
+import { authClient } from "@/lib/auth-client";
 import {
   Sidebar,
   SidebarContent,
@@ -19,11 +24,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "./ui/sidebar";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
-import { useHasActiveSubscription } from "@/features/subscriptions/hooks/use-subscription";
 
 const menuItems = [
   {
@@ -60,7 +60,7 @@ export const AppSidebar = () => {
           <SidebarMenuButton asChild className="gap-x-4 h-10 px-4">
             <Link href="/" prefetch>
               <Image src="/logos/nodes.svg" alt="logo" width={30} height={30} />
-              <span className="font-semibold text-sm">Project A</span>
+              <span className="font-semibold text-sm">AutoLink</span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem>

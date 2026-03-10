@@ -80,9 +80,6 @@ export const Editor = ({ workflowId }: { workflowId: string }) => {
         panOnDrag={[2]}
         selectionOnDrag
         deleteKeyCode={"Delete"}
-        // proOptions={{
-        //   hideAttribution: true,
-        // }}
       >
         <Background />
         <Controls />
