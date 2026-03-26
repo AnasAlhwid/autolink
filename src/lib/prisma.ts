@@ -3,7 +3,7 @@
 // so that only one instance of the client is created in your application.
 // This helps resolve issues with hot reloading that can occur
 // when using Prisma ORM with Next.js in development mode.
-
+import "dotenv/config";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/generated/prisma/client";
 
