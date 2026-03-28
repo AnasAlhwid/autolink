@@ -214,12 +214,12 @@ src/
 
 ## <a name="contact">📬 Contact</a>
 
-![Static Badge](https://img.shields.io/badge/EMail-%236D4AFF?style=social&logo=protonmail&link=mailto%3Agithub.reborn342%40passmail.com)
+[![Email](https://img.shields.io/badge/EMail-white?style=social&logo=protonmail)](mailto:github.reborn342@passmail.com)
 &nbsp;
-![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&link=https%3A%2F%2Fwww.linkedin.com%2Fin%2FAnasAlhwid%2F)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=plastic)](https://www.linkedin.com/in/AnasAlhwid/)
 &nbsp;
-![Static Badge](https://img.shields.io/badge/X-%23000000?style=social&logo=x&link=https%3A%2F%2Fx.com%2FAnasAlhwid)
+[![X ](https://img.shields.io/badge/X-%23000000?style=social&logo=x)](https://x.com/AnasAlhwid)
 &nbsp;
-![Static Badge](https://img.shields.io/badge/GitHub-%2323181717?style=social&logo=github&link=https%3A%2F%2Fgithub.com%2FAnasAlhwid)
+[![GitHub](https://img.shields.io/badge/GitHub-%23181717?style=social&logo=github)](https://github.com/AnasAlhwid)
 
 
